@@ -1,31 +1,42 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS -->
+    <meta name="description" content="Juego de la serpiente clásico - controla la serpiente para comer la comida y crecer">
+    
+    <title>Juego de la Serpiente</title>
+    
     <link rel="stylesheet" href="/css/style.css">
-
-    <title>Snake  Game</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="instructions"> Usa las flechas de direcciones , empieza tocando cualquiera de ellas.
-        </div>
-        <div class="game">
-        </div>
-        <div class="game_controls">
-            <div class="score_container">
-                Puntaje:<span class="score">0</span>
+    <main class="container">
+        <header>
+            <h1>Juego de la Serpiente</h1>
+        </header>
+
+        <section aria-label="Instrucciones del juego">
+            <p class="instructions" role="alert">
+                Usa las flechas de direcciones para mover la serpiente. 
+                Empieza presionando cualquiera de ellas.
+            </p>
+        </section>
+
+        <section aria-label="Área de juego">
+            <div class="game" role="application" aria-label="Tablero del juego de la serpiente"></div>
+        </section>
+
+        <section class="game-controls" aria-label="Controles del juego">
+            <div class="score-container">
+                <h2>Puntaje: <span class="score" aria-live="polite">0</span></h2>
             </div>
-            <button id="restart_game" type="button">Comienza de nuevo</button>
-        </div>
-    </div> 
+            <button id="restart-game" type="button" aria-label="Reiniciar juego">
+                Comienza de nuevo
+            </button>
+        </section>
+    </main>
+
     <script src="/js/script.js"></script>
 </body>
-
 </html>
